@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lienhe.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <input id="nav-toggle" type="checkbox">
+                <div class="logo">
+                    <img src="img/logo-dark.png">
+                </div>
+                <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                <i class="box">
+                    <form class="sbox" action="/search" method="get">
+                        <input class="stext" type="text" name="q" placeholder="Tìm kiếm...">
+                        <a class="sbutton" type="submit" href="javascript:void(0);">
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </a>
+                    </form>
+                </i>
+                <i class="links">
+                    <li><a href="trangchu.html">Trang Chủ</a></li>
+                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                    <li><a href="sanpham.html">Sản Phẩm</a></li>
+                    <li><a href="tintuc.html">Tin Tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </i>
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </nav>
+        </header>
+        <main>
+            <i class="baner">
+                <div style="background-image: url('img/banergioithieu.jpg');">
+                    <h1>LIÊN HỆ</h1>
+                </div>
+            </i>
+            <div class="card2">
+                <div class="card1">
+                    <h2>Thông tin liên hệ</h2>
+                    <p>Chuyên sâu về lĩnh vực Thiết kế, In ấn nhằm cung cấp giải pháp toàn
+                        diện,giúp doanh nghiệp nâng cao tính cạnh tranh thông qua việc xây
+                        dựng thương hiệu.</p>
+                    <i class="bang1">
+                        <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+                        <p>Địa chỉ:<br> 196 Nguyễn Đình Chiểu Phường 6, Quận 3, TP.HCM</p>
+                    </i>
+                    <i class="bang1">
+                        <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                        <p>Email:<br> congdinh@gmail.com.vn</p>
+                    </i>
+                    <i class="bang1">
+                        <i class="fa fa-mobile fa-4x" aria-hidden="true"></i>
+                        <p>Điện thoại:<br> 0123456789</p>
+                    </i>
+                    <i class="bang1">
+                        <i class="fa fa-internet-explorer fa-2x" aria-hidden="true"></i>
+                        <p>Website:<br> www.VietNam.vn</p>
+                    </i>
+                </div>
+                <div class="card3">
+                    <h2>Góp ý hoặc khiếu nại</h2>
+                    <p>Chuyên sâu về lĩnh vực Thiết kế, In ấn nhằm cung cấp giải pháp toàn diện, giúp
+                        doanh nghiệp nâng cao tính cạnh tranh thông qua việc xây dựng thương hiệu.</p>
+                    <div class="form">
+                        <form action="" id="form1">
+                            <div class="noidung">
+                                <i class="chu">
+                                    <input type="text" id="fname" name="fname" placeholder="họ và tên"
+                                        pattern="^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$"
+                                        required /><br>
+                                </i>
+                                <i class="chu">
+                                    <input type="email" id="femail" name="femail" placeholder="abc@gmail.com"
+                                        pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"
+                                        required /><br>
+                                </i>
+                            </div>
+                            <div class="noidung8">
+                                <i class="chu">
+                                    <input type="tel" id="fdienthoai" name="fdienthoai" placeholder="0123456789"
+                                        pattern="^(0[0-9][0-9]{8}|1[0-9]00[0-9]{4})$" 
+                                        required /><br>
+                                </i>
+                                <i class="chu">
+                                    <input type="url" id="fweb" name="fweb" placeholder="https://phancongdinh.vn"
+                                        pattern="(http|https)://.+" 
+                                        required /><br>
+                                </i>
+                            </div>
+                            <input type="text" id="fnoidung" name="fnoidung" placeholder="Nội dung "><br>
+                            <nav>
+                            <input type="submit" value="Gửi yêu cầu">
+
+                            <input type="reset" value="Làm lại">
+                            </nav>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="thongtin">
+                <div class="noidung1">
+                    <p>
+                        VỀ CHÚNG TÔI<br>
+                        Bảng báo giá<br>
+                        Profile công ty<br>
+                        Chính sách bản quyền<br>
+                        Bảo mật thông tin
+                    </p>
+                </div>
+                <div class="noidung1">
+                    <p>
+                        DỊCH VỤ<br>
+                        In ấn 3D<br>
+                        In sản phẩm<br>
+                        In kỹ thuật số<br>
+                        Thiết kế quảng cáo
+                    </p>
+                </div>
+                <div class="noidung1">
+                    <p>
+                        THÔNG TIN LIÊN HỆ<br>
+                        Địa chỉ: 196, Nguyễn Đình Chiểu, Phường 6,<br> Quận 3, TP.HCM<br>
+                        Điện thoại: 0123456789<br>
+                        Email: congdinh@gmail.com.vn
+                    </p>
+                </div>
+                <div class="noidung2">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3919.4211186887683!2d106.68805794876475!3d10.77902326205938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1622952160464!5m2!1svi!2s"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="thongtin1">
+                <p>Thiết kế bởi Phan Công Đỉnh</p>
+                <a href="https://www.google.com.vn/?hl=vi" class="fa fa-google-plus-square  fa-2x" aria-hidden="true"></a>
+                <a href="https://www.youtube.com/" class="fa fa-youtube-square fa-2x" aria-hidden="true"></a>
+                <a href="https://www.facebook.com/profile.php?id=100008925064828" class="fa fa-facebook-square fa-2x" aria-hidden="true"></a>
+                <a href="https://caodang.fpt.edu.vn/" class="fa fa-share-alt-square fa-2x" aria-hidden="true"></a>
+                <a href="https://www.pinterest.com/" class="fa fa-pinterest-square fa-2x" aria-hidden="true"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

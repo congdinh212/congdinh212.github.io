@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/trangchu.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <input id="nav-toggle" type="checkbox">
+                <div class="logo">
+                    <img src="img/logo-dark.png">
+                </div>
+                <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                <i class="box">
+                    <form class="sbox" action="/search" method="get">
+                        <input class="stext" type="text" name="q" placeholder="Tìm kiếm...">
+                        <a class="sbutton" type="submit" href="javascript:void(0);">
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </a>
+                    </form>
+                </i>
+                <i class="links">
+                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                    <li><a href="sanpham.html">Sản Phẩm</a></li>
+                    <li><a href="tintuc.html">Tin Tức</a></li>
+                    <li><a href="lienhe.html">Liên hệ</a></li>
+                </i>
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </label>
+            </nav>
+        </header>
+        <main>
+            <div class="content">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="images/Chào mừng đến với.png" width="100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/Chào mừng đến với (1).png" width="100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/Chào mừng đến với (2).png" width="100%">
+                    </div>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+                <script>
+                    //khai báo biến slideIndex đại diện cho slide hiện tại
+                    var slideIndex;
+                    // KHai bào hàm hiển thị slide
+                    function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex].style.display = "block";
+                        dots[slideIndex].className += " active";
+                        //chuyển đến slide tiếp theo
+                        slideIndex++;
+                        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+                        if (slideIndex > slides.length - 1) {
+                            slideIndex = 0
+                        }
+                        //tự động chuyển đổi slide sau 5s
+                        setTimeout(showSlides, 5000);
+                    }
+                    //mặc định hiển thị slide đầu tiên 
+                    showSlides(slideIndex = 0);
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+                </script>
+            </div>
+
+            <div class="sidebar">
+                <div class="chu1">
+                    <h1>DỊCH VỤ CHÍNH</h1>
+                    <p>Chuyên sâu về lĩnh vực Thiết kế, In ấn nhằm cung cấp giải pháp toàn diện, giúp doanh
+                        nghiệp nâng cao tính cạnh tranh thông qua<br> việc xây dựng thương hiệu.</p>
+                </div>
+                <div class="dong1">
+                    <i class="card2">
+                        <img src="img/1.png">
+                        <nav class="details">
+                            <h2>IN ẤN 3D</h2>
+                            <p>Dịch vụ này có thể mô phỏng ý tưởng qua các dụng cụ
+                                trực quan, là chỗ biến bảnvẽ 2D trên máy tính thành vật thể thật sự.
+                            </p>
+                        </nav>
+                    </i>
+                    <i class="card2">
+                        <img src="img/5.png">
+                        <nav class="details">
+                            <h2>IN KỸ THUẬT SỐ</h2>
+                            <p>Là thuật ngữ mới mà ngành in đặt tên cho việc in nhanh,
+                                chỉ sau vài thao tác click chuột, chuẩn
+                                in chung được hỗ trợ phổ biến là file PDF.
+                            </p>
+                        </nav>
+                    </i>
+                    <i class="card2">
+                        <img src="img/3.png">
+                        <nav class="details">
+                            <h2>IN ÁO THUN</h2>
+                            <p>Làm ra những chiếc áo
+                                thun theo yêu cầu đẹp nhất với chất lượng tốt nhất để đáp lại tấm lòng mong mỏi
+                                của khách hàng.
+                            </p>
+                        </nav>
+                    </i>
+                </div>
+                <div class="dong2">
+                    <i class="card3">
+                        <img src="img/2.png">
+                        <nav class="details">
+                            <h2>THIẾT KẾ QUẢNG CÁO</h2>
+                            <p>Là dịch vụ không thế thiếu trong quảng cáo, thiết kế quảng cáo sẽ
+                                giúp doanh nghiệp, những nhà sản xuất có thể trình bày một cách hiệu quả
+                                nhất.
+                            </p>
+                        </nav>
+                    </i>
+                    <i class="card3">
+                        <img src="img/6.png">
+                        <nav class="details">
+                            <h2>BỘ NHẬN DẠNG THƯƠNG HIỆU</h2>
+                            <p>In bộ nhận diện thương hiệu với doanh nghiệp nhỏ, lớn cần thiết để giúp
+                                khách hàng nhận biết thương hiệu của doanh nghiệp.
+                            </p>
+                        </nav>
+                    </i>
+                    <i class="card3">
+                        <img src="img/4.png">
+                        <nav class="details">
+                            <h2>IN TÚI GIẤY</h2>
+                            <p>Mọi kích thước, chất liệu giấy: Ivory, Couche, Kraf, Briston Quy cách: In 4 màu 1 mặt,
+                                cán mờ hoặc bóng Thời gian thực hiện: 5 – 7 ngày.
+                            </p>
+                        </nav>
+                    </i>
+                </div>
+            </div>
+            <div class="sanpham">
+                <div class="chu6">
+                    <h1>SẢN PHẨM HOÀN THÀNH</h1><br>
+                    <p>Chuyên sâu về lĩnh vực Thiết kế, In ấn nhằm cung cấp giải pháp toàn diện, giúp doanh
+                        nghiệp nâng cao tính cạnh tranh thông qua việc xây dựng thương hiệu.
+                    </p>
+                </div>
+                <i class="dong3">
+                    <i class="card4">
+                        <img src="img/cf.jpg">
+                        <nav class="chu2">
+                            <h2>In Bộ Nhận Diện Thương Hiệu</h2>
+                            <p>Các sản phẩm: Namecard, Áo thun, Thiệp, ...</p>
+                        </nav>
+                    </i>
+                    <i class="card4">
+                        <img src="img/baner.jpg">
+                        <nav class="chu2">
+                            <h2>In Poster Nhà Hàng</h2>
+                            <p>Các sản phẩm: Logo, Menu, Namecard, ...</p>
+                        </nav>
+                    </i>
+                    <i class="card4">
+                        <img src="img/dulich.jpg">
+                        <nav class="chu2">
+                            <h2>In Standee Du Lịch</h2>
+                            <p>Các sản phẩm: Poster, Standy, Logo, ...</p>
+                        </nav>
+                    </i>
+                </i>
+                <i class="dong4">
+                    <i class="card5">
+                        <img src="img/áo.jpg">
+                        <nav class="chu2">
+                            <h2>In Áo Thun Theo Yêu Cầu</h2>
+                            <p>Các sản phẩm: Áo thun, Nón, Túi xách, ...</p>
+                        </nav>
+                    </i>
+                    <i class="card5">
+                        <img src="img/sukien.jpg">
+                        <nav class="chu2">
+                            <h2>In Poster Sự Kiện</h2>
+                            <p>Các sản phẩm: Poster, Standy, Brochure, ...</p>
+                        </nav>
+                    </i>
+                    <i class="card5">
+                        <img src="img/bang.jpg">
+                        <nav class="chu2">
+                            <h2>Thiết Kế Quảng Cáo</h2>
+                            <p>Các sản phẩm: Namecard, Logo, Poster, ...</p>
+                        </nav>
+                    </i>
+                </i>
+            </div>
+            <div class="hoptac">
+                <h1>KHÁCH HÀNG CỦA CHÚNG TÔI</h1>
+                <br>
+                <br>
+                <i class="id">
+                    <i class="hinh">
+                        <img src="img/doitac1.png">
+                    </i>
+                    <i class="hinh">
+                        <img src="img/doitac2.png">
+                    </i>
+                    <i class="hinh">
+                        <img src="img/doitac3.png">
+                    </i>
+                    <i class="hinh">
+                        <img src="img/doitac4.png">
+                    </i>
+                    <i class="hinh">
+                        <img src="img/doitac5.png">
+                    </i>
+                </i>
+            </div>
+        </main>
+        <footer>
+            <div class="thongtin">
+                <div class="noidung1">
+                    <p>
+                        VỀ CHÚNG TÔI<br>
+                        Bảng báo giá<br>
+                        Profile công ty<br>
+                        Chính sách bản quyền<br>
+                        Bảo mật thông tin
+                    </p>
+                </div>
+                <div class="noidung1">
+                    <p>
+                        DỊCH VỤ<br>
+                        In ấn 3D<br>
+                        In sản phẩm<br>
+                        In kỹ thuật số<br>
+                        Thiết kế quảng cáo
+                    </p>
+                </div>
+                <div class="noidung1">
+                    <p>
+                        THÔNG TIN LIÊN HỆ<br>
+                        Địa chỉ: 196, Nguyễn Đình Chiểu, Phường 6,<br> Quận 3, TP.HCM<br>
+                        Điện thoại: 0123456789<br>
+                        Email: congdinh@gmail.com.vn
+                    </p>
+                </div>
+                <div class="noidung2">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3919.4211186887683!2d106.68805794876475!3d10.77902326205938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1622952160464!5m2!1svi!2s"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="thongtin1">
+                <p>Thiết kế bởi Phan Công Đỉnh</p>
+                <a href="https://www.google.com.vn/?hl=vi" class="fa fa-google-plus-square  fa-2x" aria-hidden="true"></a>
+                <a href="https://www.youtube.com/" class="fa fa-youtube-square fa-2x" aria-hidden="true"></a>
+                <a href="https://www.facebook.com/profile.php?id=100008925064828" class="fa fa-facebook-square fa-2x" aria-hidden="true"></a>
+                <a href="https://caodang.fpt.edu.vn/" class="fa fa-share-alt-square fa-2x" aria-hidden="true"></a>
+                <a href="https://www.pinterest.com/" class="fa fa-pinterest-square fa-2x" aria-hidden="true"></a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
